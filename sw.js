@@ -3,16 +3,10 @@
    - 다이어리 프로그램 파일만 휴대폰에 보관해요. (기록은 원래대로 기기 안 저장소에)
    - 새 버전을 올리면 다음에 열 때 자동으로 바뀌어요.
    ========================================================= */
-const VERSION = 'mmsd-v1';
+const VERSION = 'mmsd-v2';
 const FILES = [
-  './', './index.html', './manifest.webmanifest',
-  './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png', './favicon.png',
-  './themes.css', './base.css', './records.css', './special.css', './deco.css', './system.css', './print.css',
-  './settings.js', './db.js', './accounts.js', './media.js', './picker.js', './autosave.js', './themes.js', './pages.js',
-  './ui.js', './forms.js', './coll.js', './deco.js',
-  './home.js', './profile.js', './growth.js', './school.js', './friends.js', './diary.js',
-  './memories.js', './fandom.js', './study.js', './decorate.js', './system.js',
-  './zip.js', './backup.js', './printer.js', './app.js'
+  './', './index.html', './manifest.webmanifest', './style.css', './app.js',
+  './icon-192.png', './icon-512.png', './icon-maskable-512.png'
 ];
 
 self.addEventListener('install', function (e) {
