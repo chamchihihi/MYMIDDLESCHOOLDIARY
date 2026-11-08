@@ -86,7 +86,6 @@ MMSD.display = (function () {
   return { apply: apply };
 })();
 
-;
 /* ===== js/db.js ===== */
 /* =========================================================
    기록 저장소 (IndexedDB) — 이 기기 브라우저 안에만 저장
@@ -387,7 +386,6 @@ MMSD.db = (function () {
   };
 })();
 
-;
 /* ===== js/accounts.js ===== */
 /* =========================================================
    계정 (아이디 · 비밀번호) — 한 기기에서 여러 사람이 따로 쓰기
@@ -753,7 +751,6 @@ MMSD.accounts = (function () {
   };
 })();
 
-;
 /* ===== js/media.js ===== */
 /* =========================================================
    사진·동영상 저장 — 원본 + 미리보기(썸네일)를 media 저장소에 보관
@@ -1010,7 +1007,6 @@ MMSD.media = (function () {
 })();
 
 
-;
 /* ===== js/picker.js ===== */
 /* ---------------------------------------------------------
    사진·동영상(·첨부 파일) 첨부 칸
@@ -1128,7 +1124,6 @@ MMSD.mediaPicker = function (container, opts) {
   return { getIds: function () { return ids.slice(); } };
 };
 
-;
 /* ===== js/autosave.js ===== */
 /* =========================================================
    자동 저장
@@ -1232,7 +1227,6 @@ MMSD.autosave = (function () {
   };
 })();
 
-;
 /* ===== js/themes.js ===== */
 /* 테마 시스템: 전체 기본 테마 + 페이지별 개별 테마 */
 MMSD.themes = (function () {
@@ -1308,7 +1302,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/pages.js ===== */
 /* 메뉴 정의와 각 페이지 화면 */
 (function () {
@@ -1500,7 +1493,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/ui.js ===== */
 /* 화면 공통 도우미: 날짜, 학년 계산, 사진 표시, 목록 카드 등 */
 (function () {
@@ -1677,7 +1669,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/forms.js ===== */
 /* =========================================================
    공통 입력 양식 + 자동 저장 편집 화면
@@ -2019,7 +2010,6 @@ MMSD.themes = (function () {
   M.forms = { OPTS: OPTS, editor: editor, fieldHTML: fieldHTML, collect: collect, prepare: prepare };
 })();
 
-;
 /* ===== js/coll.js ===== */
 /* =========================================================
    기록 묶음(컬렉션) 공통 화면: 목록(검색·필터) + 편집
@@ -2156,7 +2146,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/deco.js ===== */
 /* =========================================================
    다이어리 꾸미기: 재료 · 페이지 그리기(화면/이미지)
@@ -2529,7 +2518,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/home.js ===== */
 /* 홈 대시보드 — 저장된 기록을 모아서 보여줌 */
 (function () {
@@ -2666,7 +2654,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/profile.js ===== */
 /* 나의 프로필 */
 (function () {
@@ -2750,7 +2737,6 @@ MMSD.themes = (function () {
   M.profilePreview = previewHTML;
 })();
 
-;
 /* ===== js/mods/growth.js ===== */
 /* 성장 기록: 기록 목록 · 학년 비교 · 입학 vs 지금 · 그래프 */
 (function () {
@@ -2942,7 +2928,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/school.js ===== */
 /* 학교생활 수첩: 선생님 · 동아리 · 반 정보 · 시간표 · 학교 행사 · 일정 · 상장 · 편지 */
 (function () {
@@ -3246,7 +3231,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/friends.js ===== */
 /* 친구 수첩 */
 (function () {
@@ -3479,7 +3463,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/diary.js ===== */
 /* 일상 다이어리: 달력 · 날짜별 보기 · 모아보기 · 일기 쓰기 */
 (function () {
@@ -3670,7 +3653,6 @@ MMSD.themes = (function () {
   M.diaryCard = entryCard;
 })();
 
-;
 /* ===== js/mods/memories.js ===== */
 /* 추억 보관함: 스크랩북 앨범 · 타임라인 · 즐겨찾기 */
 (function () {
@@ -3801,7 +3783,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/fandom.js ===== */
 /* 덕질노트: HOME · 인물 · 작품 · 공연 관람 · 굿즈 · 음악 · 덕질 일기 · 통계 */
 (function () {
@@ -4238,7 +4219,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/study.js ===== */
 /* 학업 기록: 시험 · 수행평가 · 공부 기록 · 교재 · 과목 관리 · 통계 */
 (function () {
@@ -4539,7 +4519,6 @@ MMSD.themes = (function () {
   M.study = { avgOf: avgOf, fmtMin: fmtMin };
 })();
 
-;
 /* ===== js/mods/decorate.js ===== */
 /* =========================================================
    다이어리 꾸미기: 내 페이지 · 페이지 편집기 · 나만의 스티커 · 테마
@@ -5171,7 +5150,6 @@ MMSD.themes = (function () {
   };
 })();
 
-;
 /* ===== js/mods/system.js ===== */
 /* =========================================================
    통합 검색 · 설정 및 데이터 관리 (화면 · 백업 · 인쇄 · 포토북 · 휴지통 · 계정 · 저장 공간)
@@ -5419,6 +5397,7 @@ MMSD.themes = (function () {
           const r = await B.restore(opened, mode, function (i, n) { p.textContent = '⏳ 사진·동영상 꺼내는 중… ' + i + ' / ' + n; });
           p.innerHTML = '✅ 복원을 마쳤어요. 새로 넣은 기록 ' + r.added + '개' + (mode === 'merge' ? ', 더 최근 것으로 바꾼 기록 ' + r.updated + '개, 그대로 둔 기록 ' + r.skipped + '개' : '') +
             ', 사진·동영상 ' + r.mediaAdded + '개' + (r.mediaSkipped ? ' (이미 있던 사진 ' + r.mediaSkipped + '개는 건너뜀)' : '') + '.' +
+            (r.mediaFixed ? '<br>🔧 깨져 있던 사진 ' + r.mediaFixed + '개를 고쳤어요.' : '') +
             (r.mediaBroken ? '<br>⚠️ 제대로 저장되지 않은 사진이 ' + r.mediaBroken + '개 있어요.' : '');
           M.toast('복원을 마쳤어요 ♻️');
           await B.markBackup(last ? last.kind : 'json').catch(function () {});
@@ -5638,7 +5617,6 @@ MMSD.themes = (function () {
   M.typeLabel = typeLabel;
 })();
 
-;
 /* ===== js/zip.js ===== */
 /* =========================================================
    ZIP 파일 만들기 · 읽기 (외부 라이브러리 없이)
@@ -5740,12 +5718,14 @@ MMSD.zip = (function () {
       if (!en) return null;
       const lh = new DataView(await file.slice(en.local, en.local + 30).arrayBuffer());
       const start = en.local + 30 + lh.getUint16(26, true) + lh.getUint16(28, true);
-      const raw = file.slice(start, start + en.comp, type || '');
-      if (en.method === 0) return raw;
+      const raw = file.slice(start, start + en.comp);
+      /* 아이패드·아이폰(사파리)은 고른 파일을 잠깐만 보관해요. 파일 조각을 그대로 저장하면
+         나중에 사진이 깨지므로, 내용을 통째로 읽어 새로 만든 데이터로 돌려줘요. */
+      if (en.method === 0) return new Blob([await raw.arrayBuffer()], { type: type || '' });
       if (en.method === 8) {
         if (!window.DecompressionStream) throw MMSD.AppError('ZIP', '이 브라우저는 압축된 ZIP 파일을 풀 수 없어요.');
-        const out = await new Response(raw.stream().pipeThrough(new DecompressionStream('deflate-raw'))).blob();
-        return type ? out.slice(0, out.size, type) : out;
+        const out = await new Response(raw.stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer();
+        return new Blob([out], { type: type || '' });
       }
       throw MMSD.AppError('ZIP', '지원하지 않는 압축 방식이에요.');
     }
@@ -5755,7 +5735,6 @@ MMSD.zip = (function () {
   return { Writer: Writer, read: read, crc32: crc32 };
 })();
 
-;
 /* ===== js/backup.js ===== */
 /* =========================================================
    백업 · 복원
@@ -5925,14 +5904,32 @@ MMSD.backup = (function () {
     } else {
       /* 합치기: 같은 내용의 사진은 이미 있는 것을 쓰고, 기록 속 사진 ID를 바꿔 줌 */
       const existing = await getAll('media');
+      /* 이미 있는 사진이 깨져 있으면(예: 예전 복원 때 아이패드에서 깨진 사진) 새 파일로 바꿔 줌 */
+      const broken = {};
+      const wanted = {};
+      ready.forEach(function (m) { wanted[m.id] = 1; if (m.hash) wanted['h:' + m.hash] = 1; });
+      for (const m of existing) {
+        if (!wanted[m.id] && !(m.hash && wanted['h:' + m.hash])) continue;
+        if (!(await readable(m.blob)) || (m.thumb && !(await readable(m.thumb)))) broken[m.id] = 1;
+      }
       const byId = {}, byHash = {};
-      existing.forEach(function (m) { byId[m.id] = m; if (m.hash) byHash[m.hash] = m.id; });
+      existing.forEach(function (m) { byId[m.id] = m; if (m.hash && !broken[m.id]) byHash[m.hash] = m.id; });
       const idMap = {};
       const toAdd = [];
       ready.forEach(function (m) {
-        if (byId[m.id]) { result.mediaSkipped++; return; }
-        if (m.hash && byHash[m.hash]) { idMap[m.id] = byHash[m.hash]; result.mediaSkipped++; return; }
+        if (byId[m.id] && !broken[m.id]) { result.mediaSkipped++; return; }
+        if (m.hash && byHash[m.hash] && byHash[m.hash] !== m.id) { idMap[m.id] = byHash[m.hash]; result.mediaSkipped++; return; }
+        if (broken[m.id]) result.mediaFixed = (result.mediaFixed || 0) + 1;
         toAdd.push(m);
+      });
+      /* 깨진 사진과 같은 내용의 새 사진을 다른 ID로 넣었다면, 깨진 ID도 고친 데이터로 덮어씀 */
+      existing.forEach(function (m) {
+        if (!broken[m.id] || toAdd.some(function (a) { return a.id === m.id; })) return;
+        const fresh = toAdd.find(function (a) { return a.hash && a.hash === m.hash; });
+        if (fresh) {
+          toAdd.push(Object.assign({}, m, { blob: fresh.blob, thumb: fresh.thumb, size: fresh.blob.size }));
+          result.mediaFixed = (result.mediaFixed || 0) + 1;
+        }
       });
       const remap = function (r) {
         const keys = Object.keys(idMap);
@@ -5961,9 +5958,15 @@ MMSD.backup = (function () {
 
     /* 복원 확인: 사진 파일 크기가 맞게 저장되었는지 */
     const after = await getAll('media');
-    result.mediaBroken = after.filter(function (m) { return !m.blob || m.blob.size !== m.size; }).length;
+    result.mediaBroken = 0;
+    for (const m of after) if (!m.blob || m.blob.size !== m.size || !(await readable(m.blob))) result.mediaBroken++;
     M.profile = null;
     return result;
+  }
+
+  async function readable(b) {
+    if (!b) return false;
+    try { await b.slice(0, Math.min(16, b.size)).arrayBuffer(); return true; } catch (e) { return false; }
   }
 
   async function lastBackup() { return M.db.getMeta('lastBackup'); }
@@ -5972,7 +5975,6 @@ MMSD.backup = (function () {
   return { create: create, download: download, open: open, restore: restore, estimate: estimate, lastBackup: lastBackup, markBackup: markBackup };
 })();
 
-;
 /* ===== js/printer.js ===== */
 /* =========================================================
    다이어리 인쇄 · PDF · 졸업 포토북
@@ -6342,7 +6344,6 @@ MMSD.printer = (function () {
   return { printView: printView, photobookView: photobookView, buildBook: buildBook, recordBlock: recordBlock, loadAll: loadAll };
 })();
 
-;
 /* ===== js/app.js ===== */
 /* 화면 이동(라우터) · 사이드바 · 테마 적용 */
 (function () {
@@ -6592,4 +6593,3 @@ MMSD.printer = (function () {
   };
 })();
 
-;
