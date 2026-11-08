@@ -1,0 +1,203 @@
+/* =========================================================
+   테마 6종 — 색상·종이 질감·마스킹테이프를 변수로 관리
+   [data-theme] 는 <html> 에 붙고, 설정 화면 미리보기 카드에도 붙습니다.
+   ========================================================= */
+
+:root,
+[data-theme="pink"] {
+  --bg: #fdeef3;
+  --paper: #fffafc;
+  --ink: #4a3540;
+  --ink-soft: #8a6b79;
+  --accent: #f4a3be;
+  --accent-2: #ffd6e3;
+  --accent-soft: #ffeaf1;
+  --on-accent: #4a1f30;
+  --line: #f3d2de;
+  --tape-bg: repeating-linear-gradient(90deg, rgba(255, 182, 206, .85) 0 9px, rgba(255, 220, 232, .85) 9px 18px);
+  --pattern: radial-gradient(#f5c9d8 1.2px, transparent 1.7px);
+  --pattern-size: 22px 22px;
+  --pattern-pos: 0 0;
+  --radius: 12px;
+  --tilt: .7deg;
+  --shadow: 0 2px 0 rgba(244, 163, 190, .18), 0 10px 24px rgba(120, 60, 85, .08);
+}
+
+[data-theme="blue"] {
+  --bg: #eaf3fb;
+  --paper: #fbfdff;
+  --ink: #2f3f52;
+  --ink-soft: #66788d;
+  --accent: #93c4ec;
+  --accent-2: #cfe6f8;
+  --accent-soft: #e5f1fb;
+  --on-accent: #142f49;
+  --line: #cfe0f0;
+  --tape-bg: repeating-linear-gradient(90deg, rgba(160, 205, 240, .85) 0 9px, rgba(225, 240, 252, .9) 9px 18px);
+  --pattern: linear-gradient(#dbe8f5 1px, transparent 1px), linear-gradient(90deg, #dbe8f5 1px, transparent 1px);
+  --pattern-size: 24px 24px;
+  --pattern-pos: 0 0;
+  --radius: 12px;
+  --tilt: .6deg;
+  --shadow: 0 2px 0 rgba(147, 196, 236, .2), 0 10px 24px rgba(40, 70, 110, .08);
+}
+
+[data-theme="vintage"] {
+  --bg: #efe4cf;
+  --paper: #fbf5e7;
+  --ink: #4b3a28;
+  --ink-soft: #826c55;
+  --accent: #cfa477;
+  --accent-2: #ead3b2;
+  --accent-soft: #f4e8d2;
+  --on-accent: #2e2012;
+  --line: #dcc7a4;
+  --tape-bg: linear-gradient(rgba(214, 190, 150, .85), rgba(200, 172, 128, .85));
+  --pattern: repeating-linear-gradient(0deg, rgba(120, 90, 50, .05) 0 1px, transparent 1px 4px);
+  --pattern-size: auto;
+  --pattern-pos: 0 0;
+  --radius: 4px;
+  --tilt: .9deg;
+  --shadow: 0 1px 0 rgba(120, 90, 50, .15), 0 8px 20px rgba(80, 55, 25, .12);
+}
+
+[data-theme="colorful"] {
+  --bg: #fff8e3;
+  --paper: #fffdf6;
+  --ink: #3d3550;
+  --ink-soft: #776d8c;
+  --accent: #ffbe73;
+  --accent-2: #b5ead7;
+  --accent-soft: #fff0d6;
+  --on-accent: #3d2500;
+  --line: #f1e1bc;
+  --tape-bg: repeating-linear-gradient(45deg, #ffb3ba 0 8px, #ffdfba 8px 16px, #baffc9 16px 24px, #bae1ff 24px 32px);
+  --pattern: radial-gradient(#ffcfe0 2px, transparent 2.6px), radial-gradient(#c5e8ff 2px, transparent 2.6px);
+  --pattern-size: 40px 40px;
+  --pattern-pos: 0 0, 20px 20px;
+  --radius: 18px;
+  --tilt: 1.1deg;
+  --shadow: 0 3px 0 rgba(61, 53, 80, .1), 0 10px 22px rgba(61, 53, 80, .08);
+}
+
+[data-theme="minimal"] {
+  --bg: #f5f5f3;
+  --paper: #ffffff;
+  --ink: #262626;
+  --ink-soft: #6b6b6b;
+  --accent: #dcdcd8;
+  --accent-2: #ececea;
+  --accent-soft: #f2f2f0;
+  --on-accent: #1a1a1a;
+  --line: #e3e3e0;
+  --tape-bg: rgba(220, 220, 215, .85);
+  --pattern: none;
+  --pattern-size: auto;
+  --pattern-pos: 0 0;
+  --radius: 8px;
+  --tilt: 0deg;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 6px 16px rgba(0, 0, 0, .04);
+}
+
+/* ---------- 계절별 테마 (현재 월에 따라 자동 선택) ---------- */
+[data-theme="season-spring"] {
+  --bg: #f3f9ec;
+  --paper: #fffef9;
+  --ink: #3f4a36;
+  --ink-soft: #74806a;
+  --accent: #f5b3c4;
+  --accent-2: #d6efc2;
+  --accent-soft: #fdeef2;
+  --on-accent: #4a1f2c;
+  --line: #dbe9cc;
+  --tape-bg: repeating-linear-gradient(90deg, rgba(245, 179, 196, .85) 0 9px, rgba(214, 239, 194, .9) 9px 18px);
+  --pattern: radial-gradient(#f8cfda 1.6px, transparent 2.2px), radial-gradient(#cfe7b8 1.4px, transparent 2px);
+  --pattern-size: 34px 34px;
+  --pattern-pos: 0 0, 17px 17px;
+  --radius: 14px;
+  --tilt: .8deg;
+  --shadow: 0 2px 0 rgba(150, 190, 120, .18), 0 10px 22px rgba(60, 80, 40, .08);
+}
+
+[data-theme="season-summer"] {
+  --bg: #e8f8f5;
+  --paper: #fdfffe;
+  --ink: #23423f;
+  --ink-soft: #5d7b77;
+  --accent: #7fdad0;
+  --accent-2: #fff3a6;
+  --accent-soft: #e2f7f3;
+  --on-accent: #0f3833;
+  --line: #c9ebe5;
+  --tape-bg: repeating-linear-gradient(90deg, rgba(127, 218, 208, .85) 0 9px, rgba(255, 243, 166, .9) 9px 18px);
+  --pattern: radial-gradient(#c3ece6 1.4px, transparent 2px);
+  --pattern-size: 20px 20px;
+  --pattern-pos: 0 0;
+  --radius: 14px;
+  --tilt: .8deg;
+  --shadow: 0 2px 0 rgba(127, 218, 208, .2), 0 10px 22px rgba(30, 80, 75, .08);
+}
+
+[data-theme="season-autumn"] {
+  --bg: #f8ece0;
+  --paper: #fffaf3;
+  --ink: #4a3424;
+  --ink-soft: #876650;
+  --accent: #e9a96f;
+  --accent-2: #f6d9ad;
+  --accent-soft: #fbeedd;
+  --on-accent: #3a1d06;
+  --line: #ecd4b9;
+  --tape-bg: repeating-linear-gradient(90deg, rgba(233, 169, 111, .85) 0 9px, rgba(246, 217, 173, .9) 9px 18px);
+  --pattern: radial-gradient(#f0cfae 1.4px, transparent 2px);
+  --pattern-size: 24px 24px;
+  --pattern-pos: 0 0;
+  --radius: 10px;
+  --tilt: .9deg;
+  --shadow: 0 2px 0 rgba(200, 130, 70, .18), 0 10px 22px rgba(90, 50, 20, .1);
+}
+
+[data-theme="season-winter"] {
+  --bg: #eef1f9;
+  --paper: #fcfdff;
+  --ink: #2f3550;
+  --ink-soft: #6a7194;
+  --accent: #b2bfec;
+  --accent-2: #e2e7fb;
+  --accent-soft: #edf0fc;
+  --on-accent: #1b2350;
+  --line: #d8def4;
+  --tape-bg: repeating-linear-gradient(90deg, rgba(178, 191, 236, .85) 0 9px, rgba(255, 255, 255, .95) 9px 18px);
+  --pattern: radial-gradient(#ffffff 2.2px, transparent 2.8px), radial-gradient(#d6ddf5 1.4px, transparent 2px);
+  --pattern-size: 36px 36px;
+  --pattern-pos: 0 0, 18px 18px;
+  --radius: 14px;
+  --tilt: .6deg;
+  --shadow: 0 2px 0 rgba(150, 165, 220, .2), 0 10px 22px rgba(40, 50, 100, .08);
+}
+
+/* =========================================================
+   다크 모드 — 어떤 테마든 테마의 포인트 색은 살리고 바탕만 어둡게
+   (꾸미기 페이지 · 인물/작품 카드처럼 data-theme 이 붙은 곳도 함께)
+   ========================================================= */
+html[data-mode="dark"],
+html[data-mode="dark"] [data-theme] {
+  --bg: color-mix(in srgb, var(--accent) 7%, #17151b);
+  --paper: color-mix(in srgb, var(--accent) 6%, #24212a);
+  --ink: #f2ebf0;
+  --ink-soft: #b8adb5;
+  --accent-soft: color-mix(in srgb, var(--accent) 22%, #24212a);
+  --accent-2: color-mix(in srgb, var(--accent) 45%, #24212a);
+  --line: color-mix(in srgb, var(--accent) 18%, #3a3540);
+  --pattern: radial-gradient(rgba(255, 255, 255, .07) 1.2px, transparent 1.7px);
+  --pattern-size: 22px 22px;
+  --pattern-pos: 0 0;
+  --shadow: 0 2px 0 rgba(0, 0, 0, .3), 0 10px 24px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+html[data-mode="dark"] .toast { background: #f2ebf0; color: #1d1a20; }
+html[data-mode="dark"] .db-banner { background: #3a1820; color: #ffd6de; }
+html[data-mode="dark"] .badge.hot { background: #6b2a3c; color: #ffe1e8; }
+html[data-mode="dark"] .save-pill[data-state="error"] { background: #3a1820; color: #ffd6de; }
+html[data-mode="dark"] .cal-w.sun, html[data-mode="dark"] .cal-day.sun .cal-n { color: #ff8da1; }
+html[data-mode="dark"] .cal-w.sat, html[data-mode="dark"] .cal-day.sat .cal-n { color: #8fb8ff; }

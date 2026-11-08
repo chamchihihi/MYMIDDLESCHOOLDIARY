@@ -1,0 +1,83 @@
+/* =========================================================
+   6단계: 통합 검색 · 휴지통 · 잠금 화면 · 화면 설정
+   ========================================================= */
+
+/* ---------- 사이드바 검색 · 잠금 버튼 ---------- */
+.side-search { margin: 0 4px 14px; }
+.side-search .inp { min-height: 40px; padding: 6px 12px; border-radius: 999px; }
+.install-btn { margin: 14px 6px 0; background: var(--accent); color: var(--on-accent); }
+.install-btn[hidden] { display: none; }
+.acct-box { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 6px 0; padding: 8px 10px; border-radius: 14px; background: var(--accent-soft); }
+.acct-box[hidden] { display: none; }
+.acct-name { font-weight: 800; font-size: .9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lock-card { width: min(420px, 100%); }
+.lock-card .lock-col .flabel { display: flex; flex-direction: column; gap: 4px; text-align: left; font-size: .84rem; }
+.lock-lead { color: var(--ink) !important; font-size: .92rem; line-height: 1.6; }
+.lock-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; }
+.lock-note { font-size: .75rem; margin-top: 10px !important; }
+.acct-pick { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 8px 0 4px; }
+.acct-chip {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border-radius: 999px;
+  border: 2px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer;
+}
+.acct-chip span { font-size: 1.2rem; }
+.acct-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.lock-screen { overflow-y: auto; }
+.top-search { margin-left: auto; display: grid; place-items: center; text-decoration: none; }
+
+/* ---------- 잠금 화면 ---------- */
+body.locked .app { visibility: hidden; }
+.lock-screen {
+  position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px;
+  background-color: var(--bg); background-image: var(--pattern); background-size: var(--pattern-size);
+}
+.lock-card { width: min(380px, 100%); text-align: center; padding: 34px 24px 26px; }
+.lock-emoji { font-size: 3rem; }
+.lock-card h1 { margin: 8px 0 14px; font-size: 1.25rem; font-weight: 900; line-height: 1.2; }
+.lock-card p { color: var(--ink-soft); margin: 6px 0; }
+.lock-card form { display: flex; gap: 8px; margin: 12px 0 6px; }
+.lock-card form.lock-col { flex-direction: column; }
+.lock-card form .inp { flex: 1; }
+.lock-q { font-weight: 800; color: var(--ink) !important; }
+.lock-msg { min-height: 1.4em; color: #c4314f !important; font-weight: 700; font-size: .88rem; }
+.link-btn { border: 0; background: none; color: var(--ink-soft); text-decoration: underline; cursor: pointer; font: inherit; font-size: .88rem; padding: 8px; min-height: 40px; }
+.lock-form { padding: 0; }
+
+/* ---------- 통합 검색 ---------- */
+.search-form { padding: 18px; margin-bottom: 20px; display: grid; gap: 10px; }
+.search-main { display: flex; flex-wrap: wrap; gap: 8px; }
+.search-main input { flex: 3 1 240px; width: auto; font-weight: 700; }
+.search-main select { flex: 1 1 150px; width: auto; }
+.search-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.search-filters > .inp { flex: 1 1 140px; width: auto; }
+.date-range { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .85rem; font-weight: 700; color: var(--ink-soft); }
+.date-range .inp { width: auto; }
+.search-count { font-weight: 800; margin: 0 0 8px; }
+.search-jump { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.search-jump a { padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); border: 1px solid var(--line); text-decoration: none; font-size: .82rem; font-weight: 700; }
+.search-group { scroll-margin-top: 70px; }
+.search-hit { display: flex; flex-direction: column; gap: 3px; padding: 12px 16px; margin-bottom: 10px; text-decoration: none; }
+.search-hit:hover { transform: translateY(-1px); }
+.sh-title { font-weight: 800; overflow-wrap: anywhere; }
+.sh-meta { font-size: .78rem; color: var(--ink-soft); }
+.sh-text { font-size: .88rem; overflow-wrap: anywhere; }
+.sh-tags { font-size: .78rem; color: var(--ink-soft); }
+mark { background: #ffe066; color: #2b2400; border-radius: 3px; padding: 0 2px; }
+
+/* ---------- 휴지통 ---------- */
+.trash-head { margin-bottom: 18px; }
+.toolbar-in { display: flex; flex-wrap: wrap; gap: 8px; }
+.toolbar-in .inp { flex: 1 1 200px; width: auto; }
+.trash-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.trash-list li { display: grid; grid-template-columns: auto 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 16px; }
+.tr-type { font-size: .8rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }
+.tr-title { font-weight: 800; overflow-wrap: anywhere; }
+.tr-title small { font-weight: 600; color: var(--ink-soft); }
+.tr-when { font-size: .78rem; color: var(--ink-soft); }
+.tr-btns { grid-column: 1 / -1; display: flex; gap: 6px; justify-content: flex-end; }
+@media (min-width: 760px) {
+  .trash-list li { grid-template-columns: auto 1fr auto auto; }
+  .tr-btns { grid-column: auto; }
+}
+
+.settings-stack h2.mt { margin-top: 22px; }

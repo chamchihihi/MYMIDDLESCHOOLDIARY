@@ -1,0 +1,93 @@
+/* =========================================================
+   7단계: 백업 · 복원 · 인쇄 · 졸업 포토북
+   ========================================================= */
+.mt8 { margin-top: 10px; }
+.backup-last { margin: 0 0 12px; padding: 10px 14px; border-radius: 12px; background: var(--accent-soft); font-size: .9rem; }
+.backup-last.warn { background: #fff3cd; color: #6b4e00; }
+html[data-mode="dark"] .backup-last.warn { background: #4a3a10; color: #ffe8a3; }
+.backup-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.backup-btns .btn { flex-direction: column; min-height: 64px; padding: 8px 18px; border-radius: 16px; }
+.backup-btns small { font-weight: 600; font-size: .75rem; opacity: .8; }
+.restore-box { margin-top: 16px; padding: 16px; border: 2px dashed var(--line); border-radius: 14px; }
+.restore-box h3 { margin: 0 0 6px; font-size: 1rem; overflow-wrap: anywhere; }
+.type-chips { list-style: none; padding: 0; margin: 8px 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.type-chips li { padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); font-size: .82rem; }
+.restore-mode { border: 0; padding: 0; margin: 12px 0; display: grid; gap: 8px; }
+.restore-mode legend { font-weight: 800; margin-bottom: 4px; }
+.restore-mode .switch { align-items: flex-start; font-weight: 500; font-size: .9rem; }
+.restore-mode input { margin-top: 3px; flex-shrink: 0; }
+.bot-err { color: #c4314f; font-weight: 700; }
+
+/* ---------- 인쇄 미리보기 · 포토북 페이지 ---------- */
+.print-doc { display: grid; gap: 26px; margin-top: 22px; --pb-ink: #3a3036; }
+.pb-page {
+  position: relative; background: #fffdf8; color: var(--pb-ink); border-radius: 6px; box-shadow: 0 6px 22px rgba(0, 0, 0, .12);
+  padding: 36px 34px; min-height: calc(min(100%, 800px) * 1.414); max-width: 800px; width: 100%; margin: 0 auto; overflow: hidden;
+  background-image: radial-gradient(rgba(0, 0, 0, .05) 1px, transparent 1.4px); background-size: 20px 20px;
+}
+.pr-cover { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 360px; }
+.pr-cover h1 { font-size: 2rem; margin: 0 0 8px; }
+.pr-date { color: #8a7c84; }
+.pr-h { margin: 0 0 18px; font-size: 1.4rem; padding-bottom: 6px; border-bottom: 3px dashed var(--accent); }
+.pr-h small { font-size: .8rem; color: #8a7c84; }
+.pr-rec { padding: 14px 0; border-bottom: 1px dashed #e4d9dd; break-inside: avoid; }
+.pr-rec h3 { margin: 0; font-size: 1.05rem; }
+.pr-meta { margin: 2px 0 8px; font-size: .8rem; color: #8a7c84; }
+.pr-dl { margin: 0; display: grid; gap: 4px; }
+.pr-dl div { display: grid; grid-template-columns: 120px 1fr; gap: 10px; font-size: .9rem; }
+.pr-dl dt { color: #8a7c84; font-weight: 700; }
+.pr-dl dd { margin: 0; overflow-wrap: anywhere; }
+.pr-photos { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.pr-photos img { width: 120px; height: 120px; object-fit: cover; border-radius: 6px; border: 4px solid #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .15); }
+
+.pb-cover { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background-color: var(--accent-soft); }
+.pb-cover h1 { font-size: clamp(1.8rem, 6vw, 3rem); margin: 6px 0; letter-spacing: -.02em; }
+.pb-small { font-size: .78rem; letter-spacing: .2em; color: #8a7c84; margin: 0; }
+.pb-sub { margin: 0 0 22px; font-weight: 700; color: #6d5f67; }
+.pb-cover-ph { width: 62%; aspect-ratio: 4 / 3; padding: 12px 12px 40px; background: #fff; box-shadow: 0 6px 18px rgba(0, 0, 0, .18); transform: rotate(-2deg); }
+.pb-cover-emoji { font-size: 6rem; }
+.pb-name { font-size: 1.3rem; font-weight: 900; margin-top: 22px; }
+.pb-tape { position: absolute; width: 140px; height: 34px; background: var(--tape-bg); opacity: .9; }
+.pb-tape.t1 { top: 26px; left: -20px; transform: rotate(-20deg); }
+.pb-tape.t2 { bottom: 40px; right: -20px; transform: rotate(-18deg); }
+.pb-stk { position: absolute; font-size: 2.6rem; }
+.pb-stk.s1 { top: 60px; right: 50px; } .pb-stk.s2 { bottom: 90px; left: 50px; } .pb-stk.s3 { bottom: 40px; right: 120px; }
+
+.pb-h { font-size: 1.6rem; margin: 0 0 14px; display: inline-block; background: linear-gradient(transparent 60%, var(--accent-2) 60%); padding: 0 6px; }
+.pb-h3 { font-size: 1.05rem; margin: 20px 0 10px; }
+.pb-lead { margin: 0 0 10px; font-weight: 700; color: #6d5f67; }
+.pb-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.pb-card { background: #fff; padding: 8px 8px 10px; box-shadow: 0 3px 10px rgba(0, 0, 0, .12); break-inside: avoid; font-size: .85rem; }
+.pb-card:nth-child(odd) { transform: rotate(-1deg); } .pb-card:nth-child(even) { transform: rotate(1deg); }
+.pb-card b { display: block; margin-top: 6px; overflow-wrap: anywhere; }
+.pb-card small { display: block; color: #8a7c84; }
+.pb-card p { margin: 4px 0 0; color: #5a4d55; line-height: 1.5; overflow-wrap: anywhere; }
+.pb-ph { aspect-ratio: 1; overflow: hidden; background: #f1e8ec; display: grid; place-items: center; font-size: 2.4rem; }
+.pb-ph img { width: 100%; height: 100%; object-fit: cover; }
+.pb-list { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: .9rem; }
+.pb-toc ol { font-size: 1.2rem; line-height: 2.2; padding-left: 28px; }
+.pb-grow { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 14px; text-align: center; }
+.pb-table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+.pb-table th, .pb-table td { padding: 8px; border-bottom: 1px dashed #e4d9dd; text-align: center; font-size: .9rem; }
+.pb-table tbody th { text-align: left; }
+.pb-deco { padding: 0; display: grid; place-items: center; background: #fff; }
+.pb-deco img { width: 100%; height: auto; display: block; }
+.pb-last { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background-color: var(--accent-soft); }
+.pb-last-emoji { font-size: 5rem; }
+.pb-last h2 { font-size: 2rem; margin: 10px 0; }
+.pb-msg { font-size: 1.15rem; line-height: 1.8; max-width: 480px; }
+
+/* ---------- 실제 인쇄 ---------- */
+@media print {
+  @page { size: A4; margin: 10mm; }
+  html, body { background: #fff !important; }
+  .sidebar, .topbar, .page-head, .sub-bar, .no-print, .save-pill, .toast, .overlay, .db-banner, .acct-box { display: none !important; }
+  .main-wrap { margin: 0 !important; }
+  .main { padding: 0 !important; max-width: none !important; }
+  .print-doc { display: block; margin: 0; }
+  .pb-page { box-shadow: none; border-radius: 0; max-width: none; min-height: 0; padding: 6mm 4mm; break-before: page; }
+  .pb-page:first-child { break-before: auto; }
+  .pb-cover, .pb-last, .pr-cover { min-height: 260mm; }
+  .pb-card, .pr-rec, .pb-grow { break-inside: avoid; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
